@@ -90,19 +90,6 @@ public String concat(String str) {
 </details>
 
 ### JVM
-<details>
-<summary>스크립트언어랑 컴파일언어랑 자바언어의 차이점을 JVM 동작 기반으로 설명하시오.</summary>
-<div markdown="1">       
-<br/>
-    
-- 인터프리터 언어는 코드 한줄 한줄마다 해석해서 실행
-- 컴파일 언어는 시작부터 코드를 기계어로 변환해서
-- 처음에는 .class 파일로 컴파일된 이후로 인터프리터 방식으로 실행
-    - 더 최적화하는 실행 방법?
-    - 반복되는 코드가 일정 이상일 경우 JIT 컴파일러로 네이티브 코드로 변환해서 실행 가능
-    
-</div>
-</details>
 
 <details>
 <summary>JVM은 Stack 기반 VM인데, Stack 기반 VM의 장점이 뭘까요?</summary>
