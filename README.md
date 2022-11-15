@@ -4,11 +4,8 @@
 
 week | category | study
 :---: | :---: | ---
-[01]() | Java | String, StringBuffer, StringBuilder / JVM
-
-<br/>
-
-
+[01](https://github.com/jihyehann/yapp-21-cs-study-7/tree/main/week1) | Java | String, StringBuffer, StringBuilder / JVM
+[02](https://github.com/jihyehann/yapp-21-cs-study-7/tree/main/week2) | Database | Transaction / N+1 문제 
 
 ## ✏️ 스터디 방식
 - 매주 `화요일 아침 09:30`에 진행
@@ -19,7 +16,6 @@ week | category | study
 - 무단 결석 : 10,000원
 - 인정 결석 :  5,000원 (일요일까지 공지) 
 - 지각 : 5분당 500원 (스터디 시작 5분 후부터)
-
 
 ## ⭐️ 스터디원
 
