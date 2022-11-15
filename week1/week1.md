@@ -11,6 +11,26 @@
 <br/>
 
 ## 📝 질문
+
+### String, StringBuffer, StringBuilder
+
+
+<details>
+<summary>String Constants Pool이란? (String Interning)
+</summary>
+<div markdown="1">       
+
+</div>
+</details>
+
+<details>
+<summary>String은 왜 불변으로 설계되었을까?</summary>
+<div markdown="1">       
+
+</div>
+</details>
+
+### JVM
 <details>
 <summary>스크립트언어랑 컴파일언어랑 자바언어의 차이점을 JVM 동작 기반으로 설명하시오.</summary>
 <div markdown="1">       
