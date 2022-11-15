@@ -35,6 +35,15 @@
 <summary>스크립트언어랑 컴파일언어랑 자바언어의 차이점을 JVM 동작 기반으로 설명하시오.</summary>
 <div markdown="1">       
 
+    - 인터프리터 언어는 코드 한줄 한줄마다 해석해서 실행
+
+    - 컴파일 언어는 시작부터 코드를 기계어로 변환해서
+
+    - 처음에는 .class 파일로 컴파일된 이후로 인터프리터 방식으로 실행
+    
+        - 더 최적화하는 실행 방법?
+        
+        - 반복되는 코드가 일정 이상일 경우 JIT 컴파일러로 네이티브 코드로 변환해서 실행 가능
 </div>
 </details>
 
@@ -54,8 +63,8 @@
 <details>
 <summary> JRE가 클래스 로더를 통해 메모리를 로딩한 후 JVM을 실행, 또는 JVM 안에 클래스 로더로 로딩하는 걸까요? </summary>
 <div markdown="1"> 
-  - Bootstrap Loader는 JVM 내부에 있고 여러가지 Class Loader일 경우 JRE에 있을 수 있다고 추측
-
+  
+    - Bootstrap Loader는 JVM 내부에 있고 여러가지 Class Loader일 경우 JRE에 있을 수 있다고 추측
 </div>
 </details>
 
