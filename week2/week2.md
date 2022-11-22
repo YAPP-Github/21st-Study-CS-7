@@ -138,5 +138,6 @@
 
 le2sky, jihyehann, jinsim, binimini	
 
-- 발표 & 대답 : 
-- 질문 : 
+- 발표 & 대답 : le2sky, jihyehann
+- 질문 : jinsim, binimini
+- 서기 : binimini
