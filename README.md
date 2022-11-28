@@ -6,6 +6,8 @@ week | category | study
 :---: | :---: | ---
 [01](https://github.com/jihyehann/yapp-21-cs-study-7/tree/main/week1) | Java | String, StringBuffer, StringBuilder / JVM
 [02](https://github.com/jihyehann/yapp-21-cs-study-7/tree/main/week2) | Database | Transaction / N+1 문제 
+[03](https://github.com/jihyehann/yapp-21-cs-study-7/tree/main/week3) | Operating System | 프로세스 동기화 / Context Switching
+
 
 ## ✏️ 스터디 방식
 - 매주 `화요일 아침 09:30`에 진행
