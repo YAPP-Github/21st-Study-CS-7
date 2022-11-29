@@ -4,10 +4,10 @@
 
 week | category | study
 :---: | :---: | ---
-[01](https://github.com/jihyehann/yapp-21-cs-study-7/tree/main/week1) | Java | String, StringBuffer, StringBuilder / JVM
-[02](https://github.com/jihyehann/yapp-21-cs-study-7/tree/main/week2) | Database | Transaction / N+1 문제 
-[03](https://github.com/jihyehann/yapp-21-cs-study-7/tree/main/week3) | Operating System | 프로세스 동기화 / Context Switching
-[04](https://github.com/jihyehann/yapp-21-cs-study-7/tree/main/week4) | Skill | Docker / Git Flow
+[01](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week1) | Java | String, StringBuffer, StringBuilder / JVM
+[02](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week2) | Database | Transaction / N+1 문제 
+[03](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week3) | Operating System | 프로세스 동기화 / Context Switching
+[04](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week4) | Skill | Docker / Git Flow
 
 
 ## ✏️ 스터디 방식
