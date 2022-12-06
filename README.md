@@ -2,16 +2,16 @@
 
 ## 📚 주제
 
-week | category | study
-:---: | :---: | ---
-[01](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week1) | Java | String, StringBuffer, StringBuilder / JVM
-[02](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week2) | Database | Transaction / N+1 문제 
-[03](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week3) | Operating System | 프로세스 동기화 / Context Switching
-[04](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week4) | Skill | Docker / Git Flow
-
+week | study
+:---: | :---:
+[01](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week1) | String, StringBuffer, StringBuilder / JVM
+[02](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week2) | Transaction / N+1 문제 
+[03](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week3) | 프로세스 동기화 / Context Switching
+[04](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week4) | Docker / Git Flow
+[05](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week5) | SOILD / RESTful API
 
 ## ✏️ 스터디 방식
-- 매주 `화요일 23:00`에 진행
+- 매주 `화요일 23:30` 에 진행
 - 매주 2가지 주제 면접 형식으로 발표 및 질문
 - 스터디 완료 후 자료 업로드
 
