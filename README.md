@@ -9,6 +9,7 @@ week | study
 [03](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week3) | 프로세스 동기화 / Context Switching
 [04](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week4) | Docker / Git Flow
 [05](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week5) | SOILD / RESTful API
+[06](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week6) | Scale-up Scale-out / HTTP HTTPS
 
 ## ✏️ 스터디 방식
 - 매주 `화요일 23:30` 에 진행
