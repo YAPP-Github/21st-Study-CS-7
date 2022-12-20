@@ -10,6 +10,8 @@ week | study
 [04](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week4) | Docker / Git Flow
 [05](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week5) | SOILD / RESTful API
 [06](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week6) | Scale-up Scale-out / HTTP HTTPS
+[07](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week7) | Web Server / JWT
+
 
 ## ✏️ 스터디 방식
 - 매주 `화요일 23:30` 에 진행
