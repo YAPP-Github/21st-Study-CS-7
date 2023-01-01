@@ -1,7 +1,7 @@
 # **Transaction**
 
 <aside>
-💡 **데이터베이스의 상태를 변화시키는 논리적인 작업**입니다. 트랜잭션이 안전하게 수행된다는 것을 보장하기 위해 ACID 성질이 정의되어 있습니다.
+    <h3>데이터베이스의 상태를 변화시키는 논리적인 작업입니다. <br/>트랜잭션이 안전하게 수행된다는 것을 보장하기 위해 ACID 성질이 정의되어 있습니다.</h3>
 
 </aside>
 
@@ -17,7 +17,7 @@ DB 서버에 여러 클라이언트가 동시에 엑세스하거나, 응용 프�
 
 ### JPA 동작 방식
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/710281ab-ee34-4760-afd4-01f76144e0b9/Untitled.png)
+<img width="471" alt="image" src="https://user-images.githubusercontent.com/62461857/210166323-1b079b33-e463-4963-a52d-0306fa6274ea.png">
 
 JPA 에는 Persistence 클래스가 있다. META-INF/persistence.xml 에 있는 설정 정보를 읽어서, EntityManagerFactory 클래스를 생성한다.
 
@@ -177,10 +177,7 @@ DBMS의 병행 제어 모듈이 트랜잭션의 독립성을 보장한다. OS의
 일반적으로 비휘발성 메모리에 데이터가 저장되는 것을 의미한다. 
 
 ### Reference
-[https://data-make.tistory.com/738](https://data-make.tistory.com/738)
-
-[https://goddaehee.tistory.com/167](https://goddaehee.tistory.com/167)
-
-[https://docs.spring.io/spring-framework/docs/4.2.x/spring-framework-reference/html/transaction.html#transaction-declarative-annotations](https://docs.spring.io/spring-framework/docs/4.2.x/spring-framework-reference/html/transaction.html#transaction-declarative-annotations)
-
-[https://techblog.woowahan.com/2606/](https://techblog.woowahan.com/2606/)
+[https://data-make.tistory.com/738](https://data-make.tistory.com/738)  
+[https://goddaehee.tistory.com/167](https://goddaehee.tistory.com/167)  
+[https://docs.spring.io/spring-framework/docs/4.2.x/spring-framework-reference/html/transaction.html#transaction-declarative-annotations](https://docs.spring.io/spring-framework/docs/4.2.x/spring-framework-reference/html/transaction.html#transaction-declarative-annotations)  
+[https://techblog.woowahan.com/2606/](https://techblog.woowahan.com/2606/)  
