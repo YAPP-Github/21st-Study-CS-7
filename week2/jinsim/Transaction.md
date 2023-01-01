@@ -1,7 +1,7 @@
 # **Transaction**
 
 <aside>
-💡  <b>데이터베이스의 상태를 변화시키는 논리적인 작업</b>이다. 트랜잭션이 안전하게 수행된다는 것을 보장하기 위해 ACID 성질이 정의되어 있다.
+💡 **데이터베이스의 상태를 변화시키는 논리적인 작업**입니다. 트랜잭션이 안전하게 수행된다는 것을 보장하기 위해 ACID 성질이 정의되어 있습니다.
 
 </aside>
 
@@ -17,7 +17,7 @@ DB 서버에 여러 클라이언트가 동시에 엑세스하거나, 응용 프�
 
 ### JPA 동작 방식
 
-![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/710281ab-ee34-4760-afd4-01f76144e0b9/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221222%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221222T044907Z&X-Amz-Expires=86400&X-Amz-Signature=ff74a6eb37a5f99983b5f384dceaa79ed2e537b7e283395fa988fd6b984b612b&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/710281ab-ee34-4760-afd4-01f76144e0b9/Untitled.png)
 
 JPA 에는 Persistence 클래스가 있다. META-INF/persistence.xml 에 있는 설정 정보를 읽어서, EntityManagerFactory 클래스를 생성한다.
 
@@ -34,6 +34,85 @@ EM 생성은, DB 커넥션을 하나 받은 것과 마찬가지다. 그래서 �
 당연히 데이터가 변경되는 모든 작업들은 트랜잭션 내부에서 이뤄져야 하고, 정상적인 작업이면 트랜잭션 커밋, 문제가 있는 작업이면 롤백 후에 em을 close 해주는 작업까지 해야 한다. EM이 내부적으로 DB 커넥션을 물고 동작하기 때문에 꼭 사용 후에는 닫아줘야 한다. 전체 애플리케이션이 끝나면 EMF 도 닫아야 한다. = 모든 작업을 스프링이 해준다. 
 
 ### 스프링 트랜잭션 옵션
+
+### **isolation**
+
+**트랜잭션에서 일관성없는 데이터 허용 수준을 설정 (`격리 수준`)**
+
+- **DEFAULT**
+    - DBMS의 기본 격리 수준 적용
+- **READ_UNCOMMITED** *(level 0)*
+    - 트랜잭션의 동시 액세스 허용
+    - 세 가지 동시성 부작용이 모두 발생 (Dirty read, Nonrepeatable read, Phantom read)
+    - Postgres는 미지원(대신 READ_COMMITED 로 폴백), Oracle은 지원하거나 허용하지 않음
+- **READ_COMMITED** *(level 1)*
+    - Dirty read 방지
+    - 나머지 부작용은 여전히 발생할 수 있음 (Nonrepeatable read, Phantom read)
+    - Postgres, SQL Server 및 Oracle의 기본 수준
+- **REPEATEABLE_READ** *(level 2)*
+    - Dirty read, Nonrepeatable read 방지
+    - 업데이트 손실을 방지하기 위해 필요한 가장 낮은 수준 (동시 액세스를 허용하지 않음)
+    - Phantom read 부작용은 여전히 발생
+    - MySQL의 기본 수준, Oracle은 미지원
+- **SERIALIZABLE** *(level 3)*
+    - 가장 높은 격리 수준이지만, 동시 호출을 순차적으로 실행하므로 성능 저하의 우려
+    - 모든 부작용을 방지
+
+### **propagation**
+
+**동작 도중 다른 트랜잭션을 호출할 때, 어떻게 할 것인지 지정하는 옵션 (`전파 옵션`)**
+
+- **REQUIRED** *(default)*
+    - 활성 트랜잭션이 있는지 확인하고, 아무것도 없으면 새 트랜잭션을 생성
+- **SUPPORTS**
+    - 활성 트랜잭션이 있는지 확인하고, 있으면 기존 트랜잭션 사용. 없으면 트랜잭션 없이 실행
+- **MANDATORY**
+    - 활성 트랜잭션이 있으면 사용하고, 없으면 예외 발생
+    - 독립적으로 트랜잭션을 진행하면 안 되는 경우 사용
+- **NEVER**
+    - 활성 트랜잭션이 있으면 예외 발생
+    - 트랜잭션을 사용하지 않도록 제어할 경우
+- **NOT_SUPPORTED**
+    - 현재 트랜잭션이 존재하면 트랜잭션을 일시 중단한 다음 트랜잭션 없이 비즈니스 로직 실행
+- **REQUIRES_NEW**
+    - 현재 트랜잭션이 존재하는 경우, 현재 트랜잭션을 일시 중단하고 새 트랜잭션을 생성
+- **NESTED**
+    - 트랜잭션이 존재하는지 확인하고 존재하는 경우 저장점을 표시
+    - 비즈니스 로직 실행에서 예외가 발생하면 트랜잭션이 이 저장 지점으로 롤백
+    - 활성 트랜잭션이 없으면 *REQUIRED* 처럼 작동
+
+### **noRollbackFor, rollbackFor**
+
+- 선언적 트랜잭션에서는 런타임 예외가 발생하면 롤백 수행
+    - 예외가 발생하지 않거나 체크 예외 발생 시 커밋
+    - 스프링에서는 데이터 액세스 기술 예외는 런타임 예외로 던져지므로 런타임 예외만 롤백 대상으로 삼음
+    - rollbackFor 옵션으로 기본 동작방식 변경 가능
+- **rollbackFor**
+    - 특정 예외 발생 시 rollback이 동작하도록 설정
+    
+    ```
+    @Transactional(rollbackFor=Exception.class)
+    ```
+    
+- **noRollbackFor**
+    - 특정 예외 발생 시 rollback이 동작하지 않도록 설정
+    
+    ```
+    
+    @Transactional(noRollbackFor=Exception.class)
+    ```
+    
+
+### **timeout**
+
+- 지정한 시간 내에 해당 메소드 수행이 완료되이 않은 경우 rollback 수행 (단위: second)
+- 1일 경우 no timeout (default : -1)
+
+### **readOnly**
+
+- 트랜잭션을 읽기 전용으로 설정
+- 성능을 최적화하기 위해 사용하거나, 특정 트랜잭션 작업 안에서 쓰기 작업이 일어나는 것을 의도적으로 방지하기 위해 사용
+- readOnly = true인 경우 INSERT, UPDATE, DELETE 작업 진행 시 실행 시 예외 발생(default : false)
 
 ## ACID
 
@@ -96,3 +175,12 @@ DBMS의 병행 제어 모듈이 트랜잭션의 독립성을 보장한다. OS의
 
 트랜잭션이 완료된 경우 시스템 오류가 나더라도 커밋한 상태로 반영된 데이터가 유실되지 않고 유지되어야 한다. 
 일반적으로 비휘발성 메모리에 데이터가 저장되는 것을 의미한다. 
+
+### Reference
+[https://data-make.tistory.com/738](https://data-make.tistory.com/738)
+
+[https://goddaehee.tistory.com/167](https://goddaehee.tistory.com/167)
+
+[https://docs.spring.io/spring-framework/docs/4.2.x/spring-framework-reference/html/transaction.html#transaction-declarative-annotations](https://docs.spring.io/spring-framework/docs/4.2.x/spring-framework-reference/html/transaction.html#transaction-declarative-annotations)
+
+[https://techblog.woowahan.com/2606/](https://techblog.woowahan.com/2606/)
