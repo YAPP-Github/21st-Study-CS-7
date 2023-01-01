@@ -11,7 +11,7 @@ week | study
 [05](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week5) | SOILD / RESTful API
 [06](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week6) | Scale-up Scale-out / HTTP HTTPS
 [07](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week7) | Web Server / JWT
-
+[08](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week8) | redis / 자바에서 null을 안전하게 다루는 방법
 
 ## ✏️ 스터디 방식
 - 매주 `화요일 23:30` 에 진행
