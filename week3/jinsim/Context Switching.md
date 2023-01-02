@@ -10,9 +10,9 @@ CPU는 한 번에 하나의 일만 할 수 있다.
 
 프로세스는 아래와 같은 Process Address Space라는 구조 따라 메모리에 적재된다. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/abaebb51-3a1e-4cde-8cd3-4ba43e6fcca1/Untitled.png)
+<img width="384" alt="image" src="https://user-images.githubusercontent.com/62461857/210219778-2afc6be1-9c59-4923-a582-c13599b4e82f.png">
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a7afdd55-dd1a-4212-9a55-6fd62bac6fc3/Untitled.png)
+<img width="408" alt="image" src="https://user-images.githubusercontent.com/62461857/210219794-00f2a314-fbcb-4615-9279-5db3d8676bb0.png">
 
 **Code Segment**
 
@@ -37,7 +37,7 @@ CPU는 한 번에 하나의 일만 할 수 있다.
 
 ## Process State (프로세스 상태)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0f1f3fed-24c0-4ed0-aa99-025a44abfd34/Untitled.png)
+<img width="432" alt="image" src="https://user-images.githubusercontent.com/62461857/210219819-b20fd2f3-169f-4416-bbbf-fc50a209f095.png">
 
 - **New (생성 상태)**
     - 프로세스가 새로 생성되어 메모리에 올라와 실행 준비를 완료한 상태.
@@ -103,8 +103,7 @@ OS에서의 **Context** : CPU가 해당 프로세스를 실행하기 위한 해
 그래서 Context Switching 때 PCB의 정보를 읽어서 CPU가 이전에 프로세스가 하던 일에 이어서 수행이 가능한 것이다.
 
 ### Context Switching 과정
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/243ade34-13eb-45db-8c10-351f53efcacf/Untitled.png)
+<img width="412" alt="image" src="https://user-images.githubusercontent.com/62461857/210219876-ad49eaf5-5cd4-4d93-ab38-2247a14c63fb.png">
 
 - P0를 실행 중 interrupt가 발생하거나 system call이 발생하면 P0의 상태를 PCB0에 저장한다.
 - PCB1에 저장된 P1의 상태를 불러와 복구한다.
@@ -168,9 +167,9 @@ PCB에 프로세스 정보를 저장해두고, 다른 프로세스의 PCB에 있
 
 ## 멀티 프로세스, 멀티 스레드, 멀티 코어
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c0ca9635-ee29-4b13-8615-50ef8aca2882/Untitled.png)
+<img width="423" alt="image" src="https://user-images.githubusercontent.com/62461857/210219908-aff0ed42-dc9e-4f5b-b652-d8be05974fb8.png">
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6966d44a-e262-4ac9-9d58-305876cc6985/Untitled.png)
+<img width="421" alt="image" src="https://user-images.githubusercontent.com/62461857/210219935-91e4e9db-3e44-4e5b-a549-2c7eb5a0edc7.png">
 
 ### 멀티 프로세스
 
