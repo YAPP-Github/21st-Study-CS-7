@@ -12,9 +12,10 @@ week | study
 [06](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week6) | Scale-up Scale-out / HTTP HTTPS
 [07](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week7) | Web Server / JWT
 [08](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week8) | redis / 자바에서 null을 안전하게 다루는 방법
+[09](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week9) | TDD / index
 
 ## ✏️ 스터디 방식
-- 매주 `화요일 23:30` 에 진행
+- 매주 `토요일 11:00` 에 진행
 - 매주 2가지 주제 면접 형식으로 발표 및 질문
 - 스터디 완료 후 자료 업로드
 
