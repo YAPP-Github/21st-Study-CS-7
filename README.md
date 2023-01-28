@@ -13,6 +13,8 @@ week | study
 [07](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week7) | Web Server / JWT
 [08](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week8) | redis / 자바에서 null을 안전하게 다루는 방법
 [09](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week9) | TDD / index
+[10](https://github.com/YAPP-Github/21st-Study-CS-7/tree/main/week10) | 자바 Exception / 자바 Equals, HashCode, toString
+
 
 ## ✏️ 스터디 방식
 - 매주 `토요일 11:00` 에 진행
