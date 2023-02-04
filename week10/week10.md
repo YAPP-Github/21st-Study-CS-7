@@ -1,4 +1,4 @@
-# Week 9
+# Week 10
 
 ```
 📅 2023.2.4 11:00
@@ -7,7 +7,7 @@
 ## 📚 주제
 
 1. Java Exception
-2. Java Equals, HashCode, toString
+2. Java equals(), hashCode(), toString()
 
 <br/>
 
@@ -24,7 +24,7 @@
 </div>
 </details>
   
-### Equals, HashCode, toString
+### equals(), hashCode(), toString()
 
 <details>
 <summary></summary>
@@ -38,7 +38,7 @@
 
 ## 👥 참여
 
-le2sky, jinsim, jihyehann, binimini
+le2sky, jihyehann, binimini
 
-- 발표 & 대답 :
-- 서기 : 
+- 발표 & 대답 : le2sky, binimini
+- 서기 : jihyehann
